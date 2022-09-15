@@ -15,14 +15,15 @@ class CreateProdutosTable extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
+
             $table->string('nome',100);
             $table->text('descricao')->nullable();
-            $table->integer('peso')->nullable();
-            $table->string('preco_venda',8,2)->default(0.01);
-            $table->integer('estoque_minimo')->default(1);
-            $table->integer('estoque_maximo')->default(1);
-
+            $table->integer('peso');
+            $table->float('preco_venda',8,2)->default(0.01);
+            $table->integer('estoque_min')->default(1);
+            $table->integer('estoque_max')->default(1);
             $table->timestamps();
+
         });
     }
 

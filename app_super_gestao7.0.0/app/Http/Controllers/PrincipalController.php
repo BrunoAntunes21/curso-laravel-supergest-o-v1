@@ -11,7 +11,7 @@ class PrincipalController extends Controller
        /** renderização da view*/
        $motivo_contatos=MotivoContato::all();
        //dd($motivo_contatos);
-       return view('site.principal',['motivo_contatos'=>$motivo_contatos]);
+       return view('site.principal',['motivo_contatos_id'=>$motivo_contatos]);
     }
 
 }

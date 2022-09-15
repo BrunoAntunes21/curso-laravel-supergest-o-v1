@@ -12,7 +12,7 @@
             <div class="informacao-pagina">
                 <div class="contato-principal">
                 <!-- utilização de componentes na view -->
-                   @component('site.layouts._components.form_contato',['classe'=>'borda-preta','motivo_contato'=>$motivo_contato])
+                   @component('site.layouts._components.form_contato',['classe'=>'borda-preta'])
                         <p>A nossa equipe analisará seu contato e entrá em contato  o mais breve possivel</p>
                         <h2><p>O tempo medio de resposta é de 48 HRS</p></h2>
                    @endcomponent
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-       
+
 
         <div class="rodape">
             <div class="redes-sociais">

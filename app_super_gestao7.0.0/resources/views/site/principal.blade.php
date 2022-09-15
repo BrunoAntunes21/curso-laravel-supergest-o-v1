@@ -31,7 +31,7 @@
                 <div class="contato">
                     <p>A nossa equipe analisará seu contato e entrá em contato  o mais breve possivel</p>
                     <p>O tempo medio de resposta é de 48 HRS</p>
-                 @component('site.layouts._components.form_contato',['classe'=>'borda-branca','motivo_contato'=>$motivo_contatos])
+                 @component('site.layouts._components.form_contato',['classe'=>'borda-branca','motivo_contatos_id'=>$motivo_contatos_id])
                  @endcomponent
                 </div>
             </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSiteContatosTable extends Migration
+class Fornecedor extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,15 @@ class CreateSiteContatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('site_contatos', function (Blueprint $table) {
+        Schema::create('fornecedores',function(Blueprint $table){
             $table->id();
+            $table->string('nome',50);
             $table->timestamps();
-            $table->string('nome',50);//criando um varchar
-            $table->string('telefone',20);
-            $table->string('email',150);
-            $table->integer('motivo_contato');
-            $table->text('mensagem');
-
 
         });
-
-
-
+        Schema::table('fornecedores',function (Blueprint $table){
+            $table->string('site',150)->after('nome')->nullable()->default('0');
+        });
     }
 
     /**
@@ -35,7 +30,7 @@ class CreateSiteContatosTable extends Migration
      * @return void
      */
     public function down()
-    {
-        Schema::dropIfExists('site_contatos');
+    {   Schema::dropColumns('nome');
+        Schema::dropIfExists('fornecedores');
     }
 }
